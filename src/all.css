@@ -1,71 +1,3 @@
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden;
-  font-family: "Raleway", sans-serif;
-  font-size: 15px;
-}
-
-.nav {
-  display: flex;
-  background-color:black;
- 
-  opacity: 50%;
-  justify-content: space-between;
-  position: absolute;
-  width: 100%;
-}
-
-.logo {
-  color: aliceblue;
-  align-content: center;
-  font-size: 40px;
-  font-weight: 600;
-  padding: 0px 40px;
-}
-
-.nav ul {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  padding: 20px;
-  margin: 0;
- 
-}
-.nav ul li{
-  padding: 0 20px;
-}
-
-.nav ul li a {
-  text-decoration: none;
-  padding: 0px 30px;
-  color: #d3cece;
-  align-content: center;
-  position: relative;
-}
-
-.nav ul li a::before
-{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: -100%;
-  height: 1px;
-  background: #ffffff;
-  width: 70%;
-  transition: 0.3s;
-  
-}
-
-
-.nav ul li a:hover::before {
-  transform: 0.9s;
-  left: 20px;
-  right: 0;
-} */
-
-
 * {
   margin: 0;
   padding: 0;
@@ -139,7 +71,6 @@
 
 .Menu {
   display: none;
-  /* Hide by default */
   color: #d3cece;
   padding: 0px 20px;
   align-self: center;
@@ -921,23 +852,28 @@ button:hover {
   padding: 20px;
 }
 
-.contactimg, .contctcard {
+
+.contactimg {
   display: flex;
   justify-content: center; /* Center horizontally */
   padding: 40px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.conimg img, .contctcard {
+  max-width: 360px; 
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  margin: 3px; /* Add margin for spacing */
 }
 
 .conimg img {
-  width: 100%;
-  max-width: 400px; /* Limit max width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px;
   border-bottom-left-radius: 50px;
 }
 
 .contctcard {
-  width: 100%;
-  max-width: 360px; /* Limit max width */
   background-color: #fff;
   border-radius: 2px;
   border-top-right-radius: 50px;
@@ -946,6 +882,11 @@ button:hover {
   align-items: center; /* Center horizontally */
   padding: 20px 15px;
 }
+
+
+
+
+
 
 .contctcard h2 {
   padding: 10px;
@@ -1020,23 +961,33 @@ button:hover {
     height: 300px;
   }
 
-  .contctcard {
-    width: 100%;
-    height: 300px;
+ 
+
+  .contactimg {
+
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center vertically */
   }
 
-  .contactimg, .contctcard {
-    padding: 20px;
-  }
 
-  .conimg img {
-    max-width: 200px;
-  }
 
-  .contctcard {
+
+  
+
+
+  .conimg img, .contctcard {
     max-width: 100%;
-    margin-top: 20px; /* Space between image and card */
+    width: 100%;
+    height: 300px;/* Maintain aspect ratio */
   }
+
+
+
+
+
+
+
+ 
 
   .contctcard h2 {
     font-size: 18px;
@@ -1047,41 +998,8 @@ button:hover {
   }
 }
 
-@media (max-width: 576px) {
-  .maincontact {
-    margin-top: 20px;
-    padding: 15px;
-  }
 
-  .ContactUS {
-    padding: 5px;
-  }
 
-  .contactimg, .contctcard {
-    padding: 15px;
-  }
-
-  .conimg img {
-    max-width: 150px;
-  }
-
-  .contctcard {
-    max-width: 100%;
-    margin-top: 20px; /* Space between image and card */
-  }
-
-  .contctcard h2 {
-    font-size: 16px;
-  }
-
-  .contctcard p {
-    font-size: 12px;
-  }
-
-  .contcicon a {
-    padding: 5px;
-  }
-}
 
 
 
@@ -1121,29 +1039,33 @@ button:hover {
 .mainsingle {
   display: flex;
   flex-direction: column;
+  gap: 2px;
 }
 
 .mainsingle h3 {
-  text-align: left;
+  text-align: center;
   padding: 0px 20px;
   margin: 8px 50px;
 }
 
 .image {
+
   padding: 18px 50px;
   display: flex;
   width: 100%;
   /* Adjustments for larger screens */
+  
 }
 
 .image img {
   width: 500px;
   height: 300px;
   border-radius: 8px;
+  padding-right: 8px;
 }
 
 .subimges {
-  width: 600px;
+  width: 500px;
 }
 
 .subimges img {

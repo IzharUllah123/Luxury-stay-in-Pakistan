@@ -22,8 +22,9 @@ function Single(){
                 <img src="/host.jpg" />
                 <img src="/people.jpg" />
               <div className="subimges">
-                <img src="/host.jpg" />
+               
                 <img src="/people.jpg" />
+                <img src="/host.jpg" />
                 </div>
             
               </div>
